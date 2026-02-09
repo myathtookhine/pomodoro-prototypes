@@ -1,9 +1,9 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 
-// Import audio files
-import sessionCompleteSound from '../assets/session-complete.mp3';
-import breakCompleteSound from '../assets/break-time-complete.mp3';
+// Audio files are in public/sounds/ to avoid build path issues
+// import sessionCompleteSound from '../assets/session-complete.mp3';
+// import breakCompleteSound from '../assets/break-time-complete.mp3';
 
 export const usePomodoro = (defaultFocusTime = 25, defaultBreakTime = 5) => {
   const [focusDuration, setFocusDuration] = useState(defaultFocusTime);
@@ -21,8 +21,9 @@ export const usePomodoro = (defaultFocusTime = 25, defaultBreakTime = 5) => {
   const startTimeRef = useRef(null);
 
   // Audio refs
-  const sessionAudioRef = useRef(new Audio(sessionCompleteSound));
-  const breakAudioRef = useRef(new Audio(breakCompleteSound));
+  // Audio refs - using direct paths from public folder with base URL
+  const sessionAudioRef = useRef(new Audio(`${import.meta.env.BASE_URL}sounds/session-complete.mp3`));
+  const breakAudioRef = useRef(new Audio(`${import.meta.env.BASE_URL}sounds/break-time-complete.mp3`));
 
   // Play notification sound
   const playSound = useCallback((type) => {
