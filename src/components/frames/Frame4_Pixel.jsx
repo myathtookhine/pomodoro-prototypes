@@ -71,6 +71,8 @@ const Frame4_Pixel = () => {
               <p>TIME: {Math.ceil(elapsedTime / 60)} MIN</p>
               <input 
                 type="text"
+                name="sessionName"
+                id="sessionName-pixel"
                 className="pixel-input"
                 placeholder="ENTER NAME..."
                 value={sessionName}

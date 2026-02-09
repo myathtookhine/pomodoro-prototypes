@@ -92,6 +92,8 @@ const Frame5_Cyberpunk = () => {
             <p className="cyber-modal-sub">ELAPSED: {Math.ceil(elapsedTime / 60)} CYCLES</p>
             <input 
               type="text"
+              name="sessionName"
+              id="sessionName-cyber"
               className="cyber-input"
               placeholder="ENTER_IDENTIFIER..."
               value={sessionName}

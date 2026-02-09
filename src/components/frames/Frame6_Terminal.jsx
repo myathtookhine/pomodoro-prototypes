@@ -194,6 +194,8 @@ const Frame6_Terminal = () => {
                   │ {'>'} 
                   <input 
                     type="text"
+                    name="sessionName"
+                    id="sessionName-terminal"
                     className="term-input"
                     value={sessionName}
                     onChange={(e) => setSessionName(e.target.value)}

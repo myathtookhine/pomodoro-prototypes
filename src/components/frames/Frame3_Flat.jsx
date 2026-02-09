@@ -71,6 +71,8 @@ const Frame3_Flat = () => {
             <p>You focused for {Math.ceil(elapsedTime / 60)} minutes</p>
             <input 
               type="text"
+              name="sessionName"
+              id="sessionName-flat"
               className="flat-input"
               placeholder="Enter session name..."
               value={sessionName}

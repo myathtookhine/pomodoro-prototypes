@@ -70,6 +70,8 @@ const Frame2_Brutalism = () => {
             <p>YOU FOCUSED FOR {Math.ceil(elapsedTime / 60)} MINUTES</p>
             <input 
               type="text"
+              name="sessionName"
+              id="sessionName-brutal"
               className="brutal-input"
               placeholder="ENTER SESSION NAME..."
               value={sessionName}

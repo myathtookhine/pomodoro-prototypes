@@ -82,6 +82,8 @@ const Frame1_Modern = () => {
             <p className="sheet-subtitle">You focused for {Math.ceil(elapsedTime / 60)} minutes</p>
             <input 
               type="text"
+              name="sessionName"
+              id="sessionName-modern"
               className="sheet-input"
               placeholder="Please enter your session name!"
               value={sessionName}
